@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOS Nail Patch™ — Îngrijire Profesională a Unghiilor</title>
+<style>
+/* ======================================
+   DESIGN SYSTEM — Premium Beauty Edition
+   Palette: Cream | Deep Plum | Rose | Gold
+   ====================================== */
+:root {
+  --plum:     #2d1b2e;
+  --plum2:    #3f2640;
+  --rose:     #c8506a;
+  --rose-l:   #e8798f;
+  --blush:    #f9e8ec;
+  --gold:     #c9973a;
+  --gold-l:   #e8b84b;
+  --cream:    #fdf8f5;
+  --cream2:   #f7f0ea;
+  --border:   #ecddd6;
+  --text:     #1a0a14;
+  --muted:    #7a5c65;
+  --green:    #2d7a5f;
+  --green-l:  #e6f4ef;
+  --red:      #c0394f;
+  --shadow-s: 0 2px 12px rgba(45,27,46,.10);
+  --shadow-m: 0 6px 28px rgba(45,27,46,.14);
+  --shadow-g: 0 12px 48px rgba(45,27,46,.18);
+  --radius:   16px;
+  --radius-s: 10px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.55;
+}
+
+/* ── SECTION BASE ── */
+section { padding: 32px 18px; }
+section.dark { background: var(--plum); color: #fff; }
+section.alt  { background: var(--cream2); }
+
+/* ── TYPOGRAPHY ── */
+h1 { font-size: 27px; font-weight: 900; line-height: 1.2; }
+h2 { font-size: 23px; font-weight: 800; line-height: 1.25; }
+h3 { font-size: 18px; font-weight: 700; }
+h4 { font-size: 15px; font-weight: 700; }
+p  { font-size: 15px; line-height: 1.65; }
+
+.accent  { color: var(--rose); }
+.gold    { color: var(--gold); }
+.green   { color: var(--green); }
+.red     { color: var(--red); }
+
+/* ── SECTION EYEBROW ── */
+.section-eyebrow {
+  font-size: 11px; font-weight: 800; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--rose); margin-bottom: 8px;
+  display: flex; align-items: center; gap: 6px;
+}
+.section-eyebrow::after {
+  content: ''; flex: 1; height: 1px; background: linear-gradient(to right, var(--rose), transparent);
+}
+
+/* ── STARS ── */
+.stars { color: var(--gold); font-size: 17px; letter-spacing: 2px; }
+
+/* ── BADGE ── */
+.badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .8px;
+  padding: 4px 12px; border-radius: 20px;
+  background: var(--red); color: #fff;
+}
+.badge.green-b  { background: var(--green); }
+.badge.gold-b   { background: var(--gold); color: #fff; }
+.badge.plum-b   { background: var(--plum2); color: #fff; }
+
+/* ── DIVIDER ── */
+.divider { height: 1px; background: var(--border); margin: 0; }
+
+/* ── CTA BUTTONS ── */
+.btn-primary {
+  display: block; width: 100%;
+  background: linear-gradient(135deg, var(--rose) 0%, #a63050 100%);
+  color: #fff !important;
+  text-align: center; padding: 18px 20px;
+  border-radius: 50px; font-size: 18px; font-weight: 900; letter-spacing: .4px;
+  text-decoration: none; border: none; cursor: pointer;
+  box-shadow: 0 6px 20px rgba(200,80,106,.45);
+  transition: transform .15s, box-shadow .15s;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(200,80,106,.55); }
+.btn-primary .sub { display: block; font-size: 12px; font-weight: 500; opacity: .9; margin-top: 3px; }
+
+.btn-secondary {
+  display: block; width: 100%;
+  background: var(--plum); color: #fff !important;
+  text-align: center; padding: 16px 20px; border-radius: 50px;
+  font-size: 17px; font-weight: 800; text-decoration: none; border: none; cursor: pointer;
+  box-shadow: 0 4px 14px rgba(45,27,46,.3);
+}
+
+.btn-ghost {
+  display: block; width: 100%;
+  background: transparent; color: var(--plum) !important;
+  text-align: center; padding: 14px 20px; border-radius: 50px;
+  font-size: 16px; font-weight: 800; text-decoration: none; cursor: pointer;
+  border: 2px solid var(--plum);
+}
+
+/* ── ANNOUNCEMENT BAR ── */
+.announce {
+  background: var(--plum);
+  color: #fff; text-align: center; padding: 11px 16px;
+  font-size: 13px; font-weight: 700; letter-spacing: .3px;
+}
+.announce span { color: var(--gold-l); }
+
+/* ── TRUST ROW ── */
+.trust-row {
+  display: flex; justify-content: space-around; flex-wrap: nowrap;
+  padding: 14px 8px; background: var(--cream2);
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+}
+.trust-item { text-align: center; }
+.trust-item .icon { font-size: 20px; }
+.trust-item .label {
+  font-size: 10px; font-weight: 700; color: var(--plum);
+  text-transform: uppercase; letter-spacing: .4px;
+  display: block; margin-top: 4px;
+}
+
+/* ── STATS BAR ── */
+.stats-bar {
+  display: flex; justify-content: space-around;
+  background: linear-gradient(135deg, var(--plum) 0%, var(--plum2) 100%);
+  padding: 16px 8px; gap: 4px;
+}
+.stat-item { text-align: center; color: #fff; }
+.stat-num  { font-size: 17px; font-weight: 900; color: var(--gold-l); }
+.stat-label { font-size: 10px; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .5px; margin-top: 2px; }
+
+/* ── AUDIO PLAYER ── */
+.audio-card {
+  background: #fff; border: 1.5px solid var(--border);
+  border-radius: var(--radius); padding: 14px 16px;
+  display: flex; align-items: center; gap: 14px;
+  box-shadow: var(--shadow-s); margin-bottom: 10px;
+  cursor: pointer; transition: box-shadow .2s, border-color .2s;
+}
+.audio-card:hover { box-shadow: var(--shadow-m); border-color: var(--rose-l); }
+.play-btn {
+  width: 46px; height: 46px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--rose) 0%, #a63050 100%);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 16px;
+  box-shadow: 0 4px 12px rgba(200,80,106,.35);
+}
+.audio-info { flex: 1; }
+.audio-name { font-size: 14px; font-weight: 700; color: var(--text); }
+.audio-location { font-size: 12px; color: var(--muted); }
+.audio-bar { height: 4px; background: var(--border); border-radius: 2px; margin-top: 8px; overflow: hidden; }
+.audio-fill { height: 4px; background: linear-gradient(to right, var(--rose), var(--gold)); border-radius: 2px; width: 0%; transition: width .3s; }
+.audio-time { font-size: 11px; color: var(--muted); margin-top: 4px; }
+.audio-avatar {
+  width: 44px; height: 44px; flex-shrink: 0;
+  background: var(--blush); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-size: 20px;
+}
+
+/* ── PRICE CARDS ── */
+.price-card {
+  background: #fff; border: 2px solid var(--border);
+  border-radius: var(--radius); padding: 20px 18px;
+  margin-bottom: 14px; position: relative;
+  box-shadow: var(--shadow-s);
+  transition: box-shadow .2s;
+}
+.price-card:hover { box-shadow: var(--shadow-m); }
+.price-card.popular {
+  border-color: var(--rose);
+  box-shadow: 0 6px 28px rgba(200,80,106,.2);
+}
+.price-card .popular-tag {
+  position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--rose) 0%, #a63050 100%);
+  color: #fff; font-size: 11px; font-weight: 800;
+  padding: 4px 18px; border-radius: 20px;
+  text-transform: uppercase; letter-spacing: .6px; white-space: nowrap;
+  box-shadow: 0 3px 10px rgba(200,80,106,.4);
+}
+.price-card .best-tag {
+  position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--plum) 0%, var(--plum2) 100%);
+  color: var(--gold-l); font-size: 11px; font-weight: 800;
+  padding: 4px 18px; border-radius: 20px;
+  text-transform: uppercase; letter-spacing: .6px; white-space: nowrap;
+  box-shadow: 0 3px 10px rgba(45,27,46,.35);
+}
+.price-card .card-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 14px;
+}
+.price-card .card-title  { font-size: 17px; font-weight: 800; }
+.price-card .card-price  { text-align: right; }
+.price-card .price-main  { font-size: 30px; font-weight: 900; color: var(--plum); }
+.price-card .price-old   { font-size: 14px; color: var(--muted); text-decoration: line-through; }
+.price-card .price-delivery { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+/* ── SAVING BADGE ── */
+.saving-badge {
+  background: linear-gradient(135deg, #fff7ed, #ffecd2);
+  border: 1px solid #f5c97a;
+  border-radius: 10px; padding: 10px 12px;
+  margin: 10px 0; display: flex; align-items: center; gap: 10px;
+}
+.saving-badge .s-icon { font-size: 24px; }
+.saving-badge .s-title { font-size: 14px; font-weight: 800; color: #7a4800; }
+.saving-badge .s-sub   { font-size: 12px; color: #a06010; }
+
+.saving-badge.green-s {
+  background: linear-gradient(135deg, #f0faf5, #dcf5e8);
+  border-color: #7ecfa0;
+}
+.saving-badge.green-s .s-title { color: #1a5c3a; }
+.saving-badge.green-s .s-sub   { color: #2a7a4a; }
+
+/* ── FEATURE LIST ── */
+.feature-list { list-style: none; }
+.feature-list li {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.12);
+  font-size: 14px;
+}
+.feature-list li:last-child { border-bottom: none; }
+.feature-list .icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+
+/* ── RESULT LIST ── */
+.result-list { list-style: none; }
+.result-list li {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,.1);
+  font-size: 14px; color: #e8d8f0;
+}
+.result-list li:last-child { border-bottom: none; }
+
+/* ── BENEFIT BADGES ── */
+.benefit-badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
+.ben-badge {
+  display: flex; align-items: center; gap: 6px;
+  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25);
+  border-radius: 20px; padding: 6px 13px;
+  font-size: 12px; color: #fff; font-weight: 600;
+}
+
+/* ── BEFORE / AFTER ── */
+.ba-label {
+  background: var(--red); color: #fff;
+  font-size: 11px; font-weight: 800; text-align: center;
+  padding: 5px; letter-spacing: 1px; text-transform: uppercase;
+  border-radius: 6px 6px 0 0;
+}
+.ba-label.ba-after { background: var(--green); }
+
+/* ── STEP ── */
+.step-item {
+  display: flex; align-items: flex-start; gap: 16px; margin-bottom: 28px;
+}
+.step-num {
+  width: 38px; height: 38px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--rose) 0%, #a63050 100%);
+  color: #fff; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; font-weight: 900;
+  box-shadow: 0 4px 12px rgba(200,80,106,.35);
+}
+.step-title { font-size: 15px; font-weight: 800; margin-bottom: 5px; color: var(--plum); }
+.step-desc  { font-size: 13px; color: var(--muted); }
+
+/* ── TESTIMONIAL GRID ── */
+.testimonial-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+.testi-card {
+  background: #fff; border: 1px solid var(--border);
+  border-radius: var(--radius-s); overflow: hidden; box-shadow: var(--shadow-s);
+}
+.testi-photo { width: 100%; aspect-ratio: 1; overflow: hidden; }
+.testi-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.testi-body  { padding: 8px; }
+.testi-name  { font-size: 11px; font-weight: 700; color: var(--plum); }
+.testi-city  { font-size: 10px; color: var(--muted); }
+.testi-text  { font-size: 10px; color: var(--text); margin-top: 4px; font-style: italic; line-height: 1.4; }
+
+/* ── GUARANTEE BOX ── */
+.guarantee-box {
+  background: linear-gradient(135deg, var(--plum) 0%, #4a2060 100%);
+  border-radius: var(--radius); padding: 28px 22px;
+  text-align: center; color: #fff;
+}
+.guarantee-box .g-icon { font-size: 52px; margin-bottom: 12px; }
+.guarantee-box h3 { font-size: 21px; margin-bottom: 10px; color: var(--gold-l); }
+.guarantee-box p  { font-size: 14px; color: rgba(255,255,255,.75); }
+
+/* ── PROBLEM ITEM ── */
+.problem-item {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 14px 0; border-bottom: 1px solid var(--border);
+}
+.problem-item:last-child { border-bottom: none; }
+.prob-icon { font-size: 24px; flex-shrink: 0; }
+.prob-text h4 { font-size: 14px; font-weight: 800; margin-bottom: 4px; color: var(--plum); }
+.prob-text p  { font-size: 13px; color: var(--muted); }
+
+/* ── FAQ ── */
+.faq-item { border-bottom: 1px solid var(--border); padding: 16px 0; }
+.faq-q {
+  font-size: 15px; font-weight: 700; color: var(--plum);
+  display: flex; justify-content: space-between; align-items: center; cursor: pointer;
+}
+.faq-q span { color: var(--rose); font-size: 20px; }
+.faq-a { font-size: 14px; color: var(--muted); margin-top: 10px; line-height: 1.7; }
+
+/* ── URGENCY BOX ── */
+.urgency-box {
+  background: linear-gradient(135deg, #fff7ed, #fff0e6);
+  border: 1.5px solid #f5c97a; border-radius: var(--radius-s);
+  padding: 12px 14px; font-size: 13px;
+}
+
+/* ── PRODUCT DETAIL ROW ── */
+.detail-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 0; border-bottom: 1px solid var(--border);
+}
+.detail-row:last-child { border-bottom: none; }
+.detail-row .d-icon { font-size: 22px; flex-shrink: 0; }
+.detail-row .d-text strong { display: block; font-size: 14px; font-weight: 800; color: var(--plum); }
+.detail-row .d-text span  { font-size: 13px; color: var(--muted); }
+
+/* ── RESULT BOX ── */
+.result-box {
+  background: linear-gradient(135deg, var(--plum) 0%, #4a1a3a 100%);
+  border-radius: var(--radius); padding: 20px 18px; margin-top: 10px;
+}
+.result-box .rb-title { color: var(--gold-l); font-weight: 800; font-size: 15px; margin-bottom: 12px; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--plum); color: rgba(255,255,255,.5);
+  text-align: center; padding: 28px 18px; font-size: 12px;
+}
+footer a { color: rgba(255,255,255,.4); text-decoration: none; }
+footer a:hover { color: rgba(255,255,255,.7); }
+
+/* ── OFFER HIGHLIGHT ── */
+.offer-highlight {
+  background: #fff; border: 2px solid var(--rose);
+  border-radius: var(--radius); padding: 18px;
+  box-shadow: 0 6px 24px rgba(200,80,106,.15);
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     1. TOP OFFER BAR
+     ============================================ -->
+<div style="background: linear-gradient(135deg, var(--rose,#c8506a) 0%, #a63050 100%); color:#fff; text-align:center; padding:11px 18px;">
+  <div style="font-size:16px; font-weight:900; letter-spacing:.3px; line-height:1.3;">🎁 2 + 1 CADOU — 179 lei</div>
+  <div style="margin-top:6px;">
+    <span style="background:rgba(0,0,0,.2); border-radius:20px; padding:3px 14px; font-size:13px; font-weight:700; display:inline-block;">Economisești 88 lei ✓</span>
+  </div>
+</div>
+
+<!-- ============================================
+     2. PHONE BAR
+     ============================================ -->
+<a href="tel:0775294113" style="display:block; background:#2d1b2e; color:#fff; text-align:center; padding:13px 18px; text-decoration:none;">
+  <div style="font-size:11px; color:rgba(255,255,255,.5); text-transform:uppercase; letter-spacing:1px; margin-bottom:3px;">📞 Comandă rapid — Luni–Sâmbătă</div>
+  <div style="font-size:23px; font-weight:900; color:#e8b84b; letter-spacing:1px;">0775 294 113</div>
+</a>
+
+<!-- ============================================
+     3. HERO
+     ============================================ -->
+<section style="padding:0;">
+  <img src="https://res.cloudinary.com/ddzdykggq/image/upload/v1781016121/Screenshot_2026-06-09_174136_avzi5j.png"
+    alt="Picioare cu plasturi SOS aplicați"
+    style="width:100%; display:block; object-fit:cover;" />
+</section>
+
+<section style="padding:22px 18px 28px; background:#fdf8f5;">
+  <div class="section-eyebrow">✅ FORMULA EXCLUSIVĂ HYDRO-NAIL SYSTEM™</div>
+  <h1>Unghii Sănătoase<br><span class="accent">Chiar din Prima Noapte</span></h1>
+  <p style="margin-top:12px; font-size:16px; color:#7a5c65;">
+    Singurul plasture cu hidrogelă care <strong style="color:#2d1b2e;">repară, hidratează și regenerează</strong> unghia bolnavă — cât dormi.
+  </p>
+
+  <div style="display:flex; align-items:center; gap:10px; margin-top:16px;">
+    <div class="stars">★★★★★</div>
+    <span style="font-size:14px;"><strong>4.7/5</strong> <span style="color:#7a5c65;">din 3.200+ recenzii</span></span>
+  </div>
+
+  <div class="urgency-box" style="margin-top:16px;">
+    <strong>⏰ Ofertă promoțională</strong> — Mai rămân <strong style="color:#c0394f;">18 ambalaje</strong> la acest preț
+  </div>
+
+  <div style="margin-top:20px;">
+    <a href="#oferta" class="btn-primary">
+      🛒 COMANDĂ ACUM — LIVRARE RAPIDĂ
+      <span class="sub">Ramburs la livrare • 1-2 zile lucrătoare</span>
+    </a>
+  </div>
+
+  <div class="trust-row" style="margin:18px -18px 0; border-radius:0;">
+    <div class="trust-item"><div class="icon">🚚</div><span class="label">Livrare 1-2 zile</span></div>
+    <div class="trust-item"><div class="icon">💳</div><span class="label">Plată la primire</span></div>
+    <div class="trust-item"><div class="icon">🛡️</div><span class="label">Garanție 30 zile</span></div>
+    <div class="trust-item"><div class="icon">✅</div><span class="label">Testat dermatologic</span></div>
+  </div>
+</section>
+
+<!-- ============================================
+     4. STATS BAR
+     ============================================ -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-num">4.7/5</div>
+    <div class="stat-label">Rating</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">15.000+</div>
+    <div class="stat-label">Ambalaje vândute</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">127</div>
+    <div class="stat-label">Comenzi azi</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">2 zile</div>
+    <div class="stat-label">Livrare</div>
+  </div>
+</div>
+
+<!-- ============================================
+     5. AUDIO TESTIMONIALS
+     ============================================ -->
+<section style="background:#fff;">
+  <div class="section-eyebrow">CE SPUN CLIENȚII</div>
+  <h2 style="margin-bottom:6px;">Ascultă Experiențele Reale</h2>
+  <p style="font-size:14px; color:#7a5c65; margin-bottom:20px;">Apasă play și ascultă ce spun clienții noștri</p>
+
+  <div class="audio-card" onclick="toggleAudio('a1')">
+    <audio id="a1" src="https://res.cloudinary.com/ddzdykggq/video/upload/v1781100324/zdrav_nok_t_p_rvi_komentar.m4a_ro_dubbed_vsya0q.mp3" preload="none"></audio>
+    <div class="play-btn" id="btn-a1">▶</div>
+    <div class="audio-info">
+      <div class="audio-name">Maria A., București</div>
+      <div class="audio-location"><span style="color:#e8b84b;">⭐⭐⭐⭐⭐</span> Recenzie verificată</div>
+      <div class="audio-bar"><div class="audio-fill" id="fill-a1"></div></div>
+      <div class="audio-time" id="time-a1">0:00 / 0:00</div>
+    </div>
+    <div class="audio-avatar">📞</div>
+  </div>
+
+  <div class="audio-card" onclick="toggleAudio('a2')">
+    <audio id="a2" src="https://res.cloudinary.com/ddzdykggq/video/upload/v1781100324/zdrav_nok_t_ro_dubbed_cvnoq5.mp3" preload="none"></audio>
+    <div class="play-btn" id="btn-a2">▶</div>
+    <div class="audio-info">
+      <div class="audio-name">Elena M., Cluj-Napoca</div>
+      <div class="audio-location"><span style="color:#e8b84b;">⭐⭐⭐⭐⭐</span> Recenzie verificată</div>
+      <div class="audio-bar"><div class="audio-fill" id="fill-a2"></div></div>
+      <div class="audio-time" id="time-a2">0:00 / 0:00</div>
+    </div>
+    <div class="audio-avatar">📞</div>
+  </div>
+
+  <div class="audio-card" onclick="toggleAudio('a3')">
+    <audio id="a3" src="https://res.cloudinary.com/ddzdykggq/video/upload/v1781100324/17_plastira_i_ima_rezultat.m4a_ro_dubbed_z3ozsc.mp3" preload="none"></audio>
+    <div class="play-btn" id="btn-a3">▶</div>
+    <div class="audio-info">
+      <div class="audio-name">Ioana T., Timișoara</div>
+      <div class="audio-location"><span style="color:#e8b84b;">⭐⭐⭐⭐⭐</span> Recenzie verificată</div>
+      <div class="audio-bar"><div class="audio-fill" id="fill-a3"></div></div>
+      <div class="audio-time" id="time-a3">0:00 / 0:00</div>
+    </div>
+    <div class="audio-avatar">📞</div>
+  </div>
+
+  <div class="audio-card" onclick="toggleAudio('a4')">
+    <audio id="a4" src="https://res.cloudinary.com/ddzdykggq/video/upload/v1781100364/bolaka_ro_dubbed_ccf6ey.mp3" preload="none"></audio>
+    <div class="play-btn" id="btn-a4">▶</div>
+    <div class="audio-info">
+      <div class="audio-name">Diana V., Iași</div>
+      <div class="audio-location"><span style="color:#e8b84b;">⭐⭐⭐⭐⭐</span> Recenzie verificată</div>
+      <div class="audio-bar"><div class="audio-fill" id="fill-a4"></div></div>
+      <div class="audio-time" id="time-a4">0:00 / 0:00</div>
+    </div>
+    <div class="audio-avatar">📞</div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var current = null;
+  function fmt(s){ var m=Math.floor(s/60),sec=Math.floor(s%60); return m+':'+(sec<10?'0':'')+sec; }
+  window.toggleAudio = function(id){
+    var aud = document.getElementById(id);
+    if(!aud) return;
+    if(current && current !== aud){ current.pause(); document.getElementById('btn-'+current.id).textContent='▶'; }
+    if(aud.paused){ aud.play(); document.getElementById('btn-'+id).textContent='⏸'; current=aud; }
+    else { aud.pause(); document.getElementById('btn-'+id).textContent='▶'; }
+    aud.ontimeupdate = function(){
+      var pct = aud.duration ? (aud.currentTime/aud.duration*100)+'%' : '0%';
+      document.getElementById('fill-'+id).style.width = pct;
+      document.getElementById('time-'+id).textContent = fmt(aud.currentTime)+' / '+fmt(aud.duration||0);
+    };
+    aud.onended = function(){ document.getElementById('btn-'+id).textContent='▶'; };
+  };
+})();
+</script>
+
+<!-- ============================================
+     6. PRODUCT DESCRIPTION
+     ============================================ -->
+<div class="divider"></div>
+<section style="background:#fdf8f5;">
+  <img src="https://res.cloudinary.com/ddzdykggq/image/upload/v1781015740/VS_44_yuhuhw.png"
+    alt="Aplicare plasture SOS Nail Patch"
+    style="width:100%; display:block; border-radius:12px; margin-bottom:20px;" />
+
+  <h2>SOS Nail Patch™ cu <span class="accent">Hydro-Nail System™</span></h2>
+  <p style="margin-top:10px; color:#7a5c65;">O îngrijire inteligentă de noapte care acționează pe <strong style="color:#2d1b2e;">5 niveluri</strong> cât dormi:</p>
+
+  <div style="margin-top:16px;">
+    <div class="detail-row">
+      <div class="d-icon">💧</div>
+      <div class="d-text"><strong>Hidratează</strong><span>Formula hidrogelă pătrunde adânc în unghie</span></div>
+    </div>
+    <div class="detail-row">
+      <div class="d-icon">🌿</div>
+      <div class="d-text"><strong>Purifică</strong><span>Elimină impuritățile și crează mediu sănătos</span></div>
+    </div>
+    <div class="detail-row">
+      <div class="d-icon">🔄</div>
+      <div class="d-text"><strong>Regenerează</strong><span>Stimulează creșterea keratinei sănătoase</span></div>
+    </div>
+    <div class="detail-row">
+      <div class="d-icon">✨</div>
+      <div class="d-text"><strong>Netezește</strong><span>Formează microfilm protector vizibil</span></div>
+    </div>
+    <div class="detail-row">
+      <div class="d-icon">💪</div>
+      <div class="d-text"><strong>Întărește structura</strong><span>Reduce fragilitatea și fisurarea</span></div>
+    </div>
+  </div>
+
+  <div style="margin-top:18px; background: linear-gradient(135deg, #2d1b2e 0%, #4a1a3a 100%); border-radius:12px; padding:16px 18px; color:#fff; text-align:center;">
+    <div style="font-size:13px; color:rgba(255,255,255,.6);">Rezultate vizibile</div>
+    <div style="font-size:21px; font-weight:900; color:#e8b84b; margin:5px 0;">Încă din Săptămâna a Doua!</div>
+    <div style="font-size:12px; color:rgba(255,255,255,.6);">21 de plasturi per ambalaj • Hipoalergen • Confortabil</div>
+  </div>
+</section>
+
+<!-- ============================================
+     7. SCIENCE SECTION
+     ============================================ -->
+<section class="dark">
+  <div class="section-eyebrow" style="color:#e8b84b;">DE CE FUNCȚIONEAZĂ</div>
+  <h2 style="color:#fff; margin-bottom:16px;">Știință în Spatele <span style="color:#e8b84b;">Fiecărui Plasture</span></h2>
+
+  <video src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/начално_видео-1794750.mp4"
+    autoplay loop muted playsinline
+    style="width:100%; display:block; border-radius:12px; margin-bottom:18px; aspect-ratio:1/1; object-fit:cover;"></video>
+
+  <div class="benefit-badges">
+    <div class="ben-badge">✅ Hipoalergen</div>
+    <div class="ben-badge">✅ Ușor de utilizat</div>
+    <div class="ben-badge">✅ Aderență sigură</div>
+    <div class="ben-badge">✅ Rezultate rapide</div>
+    <div class="ben-badge">✅ Testat dermatologic</div>
+    <div class="ben-badge">✅ Fără chimicale agresive</div>
+  </div>
+</section>
+
+<!-- ============================================
+     8. BEFORE / AFTER
+     ============================================ -->
+<section style="background:#fdf8f5;">
+  <div class="section-eyebrow">TRANSFORMARE REALĂ</div>
+  <h2 style="margin-bottom:18px;">Înainte &amp; După — <span class="accent">Rezultate Dovedite</span></h2>
+
+  <div style="display:flex; gap:10px; margin-bottom:18px;">
+    <div style="flex:1;">
+      <div class="ba-label">ÎNAINTE</div>
+      <img src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/VS_20-7307330_mgr3hy-1792865.webp"
+        alt="Unghie bolnavă — înainte" style="width:100%; display:block; border-radius:0 0 8px 8px;" />
+    </div>
+    <div style="flex:1;">
+      <div class="ba-label ba-after">DUPĂ</div>
+      <img src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/ChatGPT_Image_Jun_9_2026_05_46_37_PM_kdmij7-1792870.png"
+        alt="Unghie sănătoasă — după" style="width:100%; display:block; border-radius:0 0 8px 8px;" />
+    </div>
+  </div>
+
+  <div style="display:flex; gap:12px; align-items:flex-start;">
+    <div style="flex:0 0 115px;">
+      <img src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/Screenshot_2026-06-09_175420_jfeqbx-1792878.png"
+        alt="Produs close-up" style="width:100%; display:block; border-radius:10px;" />
+    </div>
+    <div style="flex:1; display:flex; flex-direction:column; gap:8px;">
+      <div>
+        <div class="ba-label" style="display:inline-block; border-radius:5px 5px 0 0;">ÎNAINTE</div>
+        <img src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/Screenshot_2026-06-09_175634_cyqoma-1792886.png"
+          alt="Înainte" style="width:100%; display:block; border-radius:0 8px 8px 8px;" />
+      </div>
+      <div>
+        <div class="ba-label ba-after" style="display:inline-block; border-radius:5px 5px 0 0;">DUPĂ</div>
+        <img src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/Screenshot_2026-06-09_175838_aq3p3l-1792892.png"
+          alt="După" style="width:100%; display:block; border-radius:0 8px 8px 8px;" />
+      </div>
+    </div>
+  </div>
+
+  <img src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/VS_24_nctokc-1792895.png"
+    alt="Beneficii + Înainte/După" style="width:100%; display:block; border-radius:12px; margin-top:16px;" />
+</section>
+
+<!-- ============================================
+     9. PRICING
+     ============================================ -->
+<section class="alt" id="oferta" style="padding:28px 18px;">
+  <div style="text-align:center; margin-bottom:22px;">
+    <span class="badge green-b" style="margin-bottom:10px; display:inline-flex;">✅ ÎN STOC</span>
+    <h2 style="margin-bottom:6px;">Promoție Săptămânală</h2>
+    <p style="font-size:13px; color:#7a5c65;">Stoc limitat — prețuri valabile doar azi</p>
+    <img src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/ChatGPT_Image_Jun_10_2026_01_52_30_PM_xlbj9t-1792899.png"
+      alt="Ambalaj SOS Nail Patch"
+      style="width:155px; height:155px; object-fit:contain; display:block; margin:16px auto; border-radius:10px;" />
+    <div style="font-size:13px; color:#7a5c65;">
+      🚚 Livrare cu ramburs: <strong style="color:#2d1b2e;">15 lei</strong> &nbsp;|&nbsp; ⏱️ 1-2 zile lucrătoare
+    </div>
+  </div>
+
+  <!-- CARD 1 -->
+  <div class="price-card">
+    <div class="card-header">
+      <div>
+        <div class="card-title">1 Ambalaj<br><span style="font-size:13px;color:#7a5c65;">21 plasturi/ambalaj</span></div>
+        <div style="margin-top:6px; font-size:12px; color:#7a5c65;">Preț per plasture: <strong>4,24 lei</strong></div>
+      </div>
+      <div class="card-price">
+        <div class="price-main">89 lei</div>
+        <div class="price-old">120 lei</div>
+        <div class="price-delivery">+ 15 lei livrare</div>
+      </div>
+    </div>
+    <a href="http://sosnailpatch-ro.convertbuilder.com/1br" class="btn-secondary" style="font-size:15px; padding:14px;">Comandă — 89 lei</a>
+  </div>
+
+  <!-- CARD 2 — POPULAR -->
+  <div class="price-card popular">
+    <div class="popular-tag">⭐ CEL MAI POPULAR</div>
+    <div style="height:12px;"></div>
+    <div class="card-header">
+      <div>
+        <div class="card-title">2 + 1 <span style="color:#2d7a5f;">CADOU</span><br><span style="font-size:13px;color:#7a5c65;">63 plasturi total</span></div>
+      </div>
+      <div class="card-price">
+        <div class="price-main">179 lei</div>
+        <div class="price-old">267 lei</div>
+        <div class="price-delivery">+ 15 lei livrare</div>
+      </div>
+    </div>
+    <div class="saving-badge">
+      <div class="s-icon">🎁</div>
+      <div>
+        <div class="s-title">Economisești 88 lei</div>
+        <div class="s-sub">Un ambalaj întreg CADOU (valoare 89 lei)</div>
+      </div>
+    </div>
+    <a href="http://sosnailpatch-ro.convertbuilder.com/1br-copy" class="btn-primary">Comandă — 179 lei</a>
+  </div>
+
+  <!-- CARD 3 — BEST VALUE -->
+  <div class="price-card" style="border-color:#3f2640;">
+    <div class="best-tag">🏆 CEA MAI BUNA ALEGERE</div>
+    <div style="height:12px;"></div>
+    <div class="card-header">
+      <div>
+        <div class="card-title">3 + 2 <span style="color:#2d7a5f;">CADOU</span><br><span style="font-size:13px;color:#7a5c65;">105 plasturi total</span></div>
+      </div>
+      <div class="card-price">
+        <div class="price-main">269 lei</div>
+        <div class="price-old">445 lei</div>
+        <div class="price-delivery">+ 15 lei livrare</div>
+      </div>
+    </div>
+    <div class="saving-badge green-s">
+      <div class="s-icon">🎁🎁</div>
+      <div>
+        <div class="s-title">Economisești 176 lei</div>
+        <div class="s-sub">Două ambalaje CADOU (valoare 178 lei)</div>
+      </div>
+    </div>
+    <a href="http://sosnailpatch-ro.convertbuilder.com/1br-copy-copy" class="btn-secondary">Comandă — 269 lei</a>
+  </div>
+
+  <div style="margin-top:20px; text-align:center;">
+    <a href="tel:0775294113" class="btn-primary" style="font-size:17px;">
+      📞 COMANDĂ TELEFONIC
+      <span class="sub">Luni–Sâmbătă | 08:00–20:00</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============================================
+     10. TESTIMONIAL GRID
+     ============================================ -->
+<section style="background:#fff;">
+  <div class="section-eyebrow">RECENZII VERIFICATE</div>
+  <h2 style="margin-bottom:6px;">Peste 2.800 de Clienți <span class="accent">Ne Recomandă</span></h2>
+  <p style="font-size:13px; color:#7a5c65; margin-bottom:18px;">Ce spun clienții care au testat SOS Nail Patch™</p>
+
+  <div class="testimonial-grid">
+    <div class="testi-card">
+      <div class="testi-photo">
+        <img src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/Screenshot_2026-06-09_181041_qkkzbo-1792902.png" alt="Client cu produs" />
+      </div>
+      <div class="testi-body">
+        <div class="stars" style="font-size:11px;">★★★★★</div>
+        <div class="testi-name">Maria A.</div>
+        <div class="testi-city">București</div>
+        <div class="testi-text">„Am văzut diferența încă din prima săptămână!"</div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-photo">
+        <img src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/Screenshot_2026-06-09_181146_metyn8-1792905.png" alt="Client cu produs" />
+      </div>
+      <div class="testi-body">
+        <div class="stars" style="font-size:11px;">★★★★★</div>
+        <div class="testi-name">Elena M.</div>
+        <div class="testi-city">Cluj</div>
+        <div class="testi-text">„În fine ceva care chiar funcționează!"</div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-photo">
+        <img src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/Screenshot_2026-06-09_181203_kdyra4-1792908.png" alt="Client cu produs" />
+      </div>
+      <div class="testi-body">
+        <div class="stars" style="font-size:11px;">★★★★★</div>
+        <div class="testi-name">Diana V.</div>
+        <div class="testi-city">Iași</div>
+        <div class="testi-text">„Le-am recomandat deja la 3 prieteni!"</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     11. EDUCATION SECTION
+     ============================================ -->
+<section class="dark">
+  <div class="section-eyebrow" style="color:#e8b84b;">ÎNȚELEGE PROBLEMA</div>
+  <h2 style="color:#fff; margin-bottom:16px;">De Ce Apar Problemele cu Unghiile?</h2>
+  <p style="color:rgba(255,255,255,.7); font-size:14px; margin-bottom:16px;">
+    Unghia nu este o „placă moartă", ci o structură vie formată din keratină — bariera sa naturală de protecție, dar fără circulație sanguină proprie, se regenerează mai lent decât pielea.
+  </p>
+  <p style="color:#e8b84b; font-weight:700; font-size:14px; margin-bottom:14px;">Echilibrul se rupe atunci când:</p>
+  <ul class="feature-list">
+    <li><span class="icon">👟</span><span>Purtarea îndelungată a încălțămintei închise — mediu umed favorabil</span></li>
+    <li><span class="icon">💧</span><span>Umiditate și igienă deficitară la nivelul unghiei</span></li>
+    <li><span class="icon">🧪</span><span>Produse chimice agresive (ojă, acetonă frecventă)</span></li>
+    <li><span class="icon">⚡</span><span>Microtraumatisme repetate — sport, încălțări strâmte</span></li>
+    <li><span class="icon">🔬</span><span>Dezechilibru local care favorizează aspectul neplăcut</span></li>
+  </ul>
+</section>
+
+<!-- ============================================
+     12. PROBLEM → SOLUTION
+     ============================================ -->
+<section style="background:#fdf8f5;">
+  <div class="section-eyebrow">CUM AJUTĂ SOS NAIL PATCH™</div>
+  <h2 style="margin-bottom:18px;">Soluție pentru <span class="accent">Fiecare Problemă</span></h2>
+
+  <div class="problem-item">
+    <div class="prob-icon">💛</div>
+    <div class="prob-text">
+      <h4>Îngălbenire și modificarea aspectului unghiei</h4>
+      <p>Formulele antifungice din hidrogelă creează un mediu neprielnic și restaurează culoarea naturală a unghiei.</p>
+    </div>
+  </div>
+
+  <video src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/Recording_2026-06-09_181604-1792944.mp4"
+    autoplay loop muted playsinline
+    style="width:100%; display:block; border-radius:12px; margin:14px 0 20px; aspect-ratio:9/16; object-fit:cover;"></video>
+
+  <div class="problem-item">
+    <div class="prob-icon">💪</div>
+    <div class="prob-text">
+      <h4>Îngroșare, rugozitate și creștere lentă</h4>
+      <p>Hidrogela înmoaie placa unghiei, facilitând creșterea keratinei sănătoase și refacerea aspectului normal.</p>
+    </div>
+  </div>
+  <div class="problem-item">
+    <div class="prob-icon">✨</div>
+    <div class="prob-text">
+      <h4>Aspect deteriorat și lipsă de strălucire</h4>
+      <p>Componentele filmogene creează un microfilm protector care netezește suprafața și conferă un aspect îngrijit chiar din primele aplicări.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     13. HOW TO USE — 5 PAȘI
+     ============================================ -->
+<section class="alt">
+  <div class="section-eyebrow">INSTRUCȚIUNI DE UTILIZARE</div>
+  <h2 style="margin-bottom:24px;">Cum se Utilizează — <span class="accent">5 Pași Simpli</span></h2>
+
+  <div class="step-item">
+    <div class="step-num">1</div>
+    <div>
+      <div class="step-title">🧼 Curăță și usucă unghia complet</div>
+      <div class="step-desc">Spală picioarele cu apă și săpun, usucă bine, mai ales în jurul unghiei. Nu aplica pe unghie umedă.</div>
+      <video src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/Recording_2026-06-09_181925-1794037.mp4"
+        autoplay loop muted playsinline
+        style="width:100%; display:block; border-radius:10px; margin-top:12px;"></video>
+    </div>
+  </div>
+
+  <div class="step-item">
+    <div class="step-num">2</div>
+    <div>
+      <div class="step-title">🖐️ Dezlipește folia de protecție</div>
+      <div class="step-desc">Îndepărtează ușor folia de pe adeziv. Nu atinge suprafața adezivă cu degetele.</div>
+      <video src="https://res.cloudinary.com/ddzdykggq/video/upload/v1781084710/1%D0%B2%D0%BE_rzmo4n.mp4"
+        autoplay loop muted playsinline
+        style="width:100%; display:block; border-radius:10px; margin-top:12px;"></video>
+    </div>
+  </div>
+
+  <div class="step-item">
+    <div class="step-num">3</div>
+    <div>
+      <div class="step-title">🎯 Aplică plasturele centrat pe unghie</div>
+      <div class="step-desc">Poziționează hidrogelul direct pe unghie. Apasă ușor pentru aderență completă pe toată suprafața.</div>
+      <video src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/Recording_2026-06-09_182207-1794090.mp4"
+        autoplay loop muted playsinline
+        style="width:100%; display:block; border-radius:10px; margin-top:12px;"></video>
+    </div>
+  </div>
+
+  <div class="step-item">
+    <div class="step-num">4</div>
+    <div>
+      <div class="step-title">😴 Lasă toată noaptea, minimum 6 ore</div>
+      <div class="step-desc">Plasturele lucrează cât dormi. Formula hidrogelă are nevoie de cel puțin 6 ore pentru efect optim.</div>
+      <video src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/2ро-1794151.mp4"
+        autoplay loop muted playsinline
+        style="width:100%; display:block; border-radius:10px; margin-top:12px;"></video>
+    </div>
+  </div>
+
+  <div class="step-item" style="margin-bottom:10px;">
+    <div class="step-num">5</div>
+    <div>
+      <div class="step-title">🔄 Dimineața — îndepărtează ușor și repetă</div>
+      <div class="step-desc">Folosește regulat ca parte din rutina ta de îngrijire nocturnă. Câteva secunde seara sunt suficiente.</div>
+      <video src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/премахвамне_на_пластир-1794297.mp4"
+        autoplay loop muted playsinline
+        style="width:100%; display:block; border-radius:10px; margin-top:12px;"></video>
+    </div>
+  </div>
+
+  <div class="result-box">
+    <div class="rb-title">🏆 Rezultatele tale:</div>
+    <ul class="result-list">
+      <li>✅&nbsp; Unghii mai netede și vizibil mai sănătoase</li>
+      <li>✅&nbsp; Mai puțin disconfort și senzație de uscăciune</li>
+      <li>✅&nbsp; Aspect îngrijit cu efort minim</li>
+      <li>❤️&nbsp; <strong style="color:#fff;">SOS Nail Patch™ — îngrijire nocturnă simplă.</strong></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================
+     14. GUARANTEE
+     ============================================ -->
+<section style="background:#fff; padding:28px 18px;">
+  <div class="guarantee-box">
+    <div class="g-icon">🛡️</div>
+    <h3>Garanție 30 de Zile</h3>
+    <p>Dacă nu ești mulțumit din orice motiv, îți returnăm banii integral — fără întrebări, fără complicații.</p>
+  </div>
+</section>
+
+<!-- ============================================
+     15. SECOND OFFER CTA
+     ============================================ -->
+<section class="alt" id="oferta2" style="padding:28px 18px;">
+  <div style="text-align:center; margin-bottom:18px;">
+    <span class="badge" style="margin-bottom:10px; display:inline-flex;">🔥 OFERTĂ LIMITATĂ</span>
+    <h2 style="margin-top:10px;">Comandă Acum și <span class="accent">Economisești</span></h2>
+    <p style="font-size:14px; color:#7a5c65; margin-top:8px;">Stoc disponibil azi — livrare garantată în 1-2 zile</p>
+  </div>
+
+  <div class="offer-highlight" style="margin-bottom:16px;">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <div>
+        <div style="font-weight:800; font-size:16px; color:#2d1b2e;">2 + 1 CADOU <span style="color:#2d7a5f;">✓</span></div>
+        <div style="font-size:13px; color:#7a5c65;">63 plasturi total</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:30px; font-weight:900; color:#2d1b2e;">179 lei</div>
+        <div style="font-size:12px; color:#7a5c65;">+ 15 lei livrare ramburs</div>
+      </div>
+    </div>
+    <div style="background: linear-gradient(135deg, #fff7ed, #ffecd2); border:1px solid #f5c97a; border-radius:8px; padding:9px 12px; margin:12px 0; font-size:13px; font-weight:700; color:#7a4800;">
+      🎁 Economisești 88 lei — 1 ambalaj întreg CADOU
+    </div>
+    <a href="http://sosnailpatch-ro.convertbuilder.com/1br-copy" class="btn-primary">🛒 COMANDĂ ACUM — 179 lei</a>
+  </div>
+
+  <a href="tel:0775294113" class="btn-secondary">📞 SAU SUNĂ PENTRU COMANDĂ</a>
+  <p style="font-size:12px; text-align:center; color:#7a5c65; margin-top:12px;">✅ Plată la livrare • Fără card • Fără risc</p>
+</section>
+
+<!-- ============================================
+     16. FAQ
+     ============================================ -->
+<section style="background:#fff;">
+  <div class="section-eyebrow">ÎNTREBĂRI FRECVENTE</div>
+  <h2 style="margin-bottom:22px;">Ai Întrebări? Avem <span class="accent">Răspunsuri</span></h2>
+
+  <div class="faq-item">
+    <div class="faq-q">Cât de repede văd rezultate? <span>+</span></div>
+    <div class="faq-a">
+      Primele semne apar chiar din <strong>prima noapte</strong> — unghia pare mai hidratată, mai netedă și mai ușor de tăiat.<br><br>
+      Începând cu <strong>săptămâna a doua</strong>, unghia începe să se decoloreze vizibil, se înmoaie și se taie mult mai ușor — fără efort.<br><br>
+      Clienții noștri au observat că în jurul <strong>lunii a treia</strong> a apărut creșterea unui unghii noi, sănătoase.
+    </div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Pot folosi alte produse în timp ce folosesc plasturii? <span>+</span></div>
+    <div class="faq-a">
+      Da, fără nicio problemă! Plasturii SOS Nail Patch™ nu interferează cu alte produse de îngrijire.<br><br>
+      Mai mult — după ce plasturele înmoaie unghia, este momentul perfect pentru a aplica creme sau uleiuri de îngrijire. Unghia absoarbe activi mult mai eficient. 💡
+    </div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Este sigur pentru utilizare zilnică? <span>+</span></div>
+    <div class="faq-a">Da! Formula este hipoalergenică, testată dermatologic, fără chimicale agresive. Potrivit pentru utilizare zilnică, inclusiv pentru piele sensibilă.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Ce se întâmplă dacă nu sunt mulțumit? <span>+</span></div>
+    <div class="faq-a">Avem garanție 30 de zile satisfacție sau bani înapoi. Contactează-ne și îți returnăm suma integral, fără birocrație.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Cât durează livrarea? <span>+</span></div>
+    <div class="faq-a">Livrare prin FAN Courier în 1-2 zile lucrătoare în toată România. Plata se face la primirea coletului (ramburs).</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Câte aplicări conține un ambalaj? <span>+</span></div>
+    <div class="faq-a">Fiecare ambalaj conține 21 de plasturi — suficient pentru 3 săptămâni de utilizare zilnică sau 6+ săptămâni cu 3-4 aplicări pe săptămână.</div>
+  </div>
+</section>
+
+<!-- ============================================
+     17. FINAL CTA
+     ============================================ -->
+<section style="background: linear-gradient(155deg, #2d1b2e 0%, #4a1a3a 60%, #2d1b2e 100%); color:#fff; text-align:center; padding:36px 18px;">
+  <div class="section-eyebrow" style="color:#e8b84b; justify-content:center;">COMANDĂ ACUM</div>
+  <h2 style="color:#fff; margin-bottom:10px;">Nu Mai Amâna <span style="color:#e8b84b;">Îngrijirea Unghiilor</span></h2>
+  <p style="color:rgba(255,255,255,.6); font-size:14px; margin-bottom:22px;">15.000+ ambalaje vândute • Livrare 1-2 zile • Plată la primire</p>
+
+  <a href="http://sosnailpatch-ro.convertbuilder.com/1br" class="btn-primary" style="margin-bottom:14px; font-size:18px;">
+    🛒 COMANDĂ — DE LA 89 lei
+    <span class="sub">+ 15 lei livrare ramburs</span>
+  </a>
+  <a href="tel:0775294113" style="display:block; width:100%; background:rgba(255,255,255,.1); border:1.5px solid rgba(255,255,255,.25); color:#fff !important; text-align:center; padding:16px 20px; border-radius:50px; font-size:17px; font-weight:800; text-decoration:none;">
+    📞 Comandă Telefonic
+  </a>
+  <p style="font-size:11px; color:rgba(255,255,255,.3); margin-top:18px;">
+    🚫 SOS Nail Patch™ nu este un medicament. Nu înlocuiește consultul medical.<br>
+    Rezultatele pot varia de la o persoană la alta.
+  </p>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer>
+  <p style="margin-bottom:16px; color:rgba(255,255,255,.7); font-weight:700;">Distribuitor autorizat</p>
+  <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:18px; font-size:12px;">
+    <a href="http://sosnailpatch-ro.convertbuilder.com/1br-copy-copy-copy">Termeni și condiții</a>
+    <a href="http://sosnailpatch-ro.convertbuilder.com/1br-copy-copy-copy-copy">Politica de confidențialitate</a>
+    <a href="http://sosnailpatch-ro.convertbuilder.com/1br-copy-copy-copy-copy-copy">Cum folosim „cookie-uri"</a>
+    <a href="http://sosnailpatch-ro.convertbuilder.com/1br-copy-copy-copy-copy-copy-copy">Contacte</a>
+  </div>
+  <p style="color:rgba(255,255,255,.25); font-size:12px; border-top:1px solid rgba(255,255,255,.08); padding-top:16px;">
+    „SOS Nail Patch™" România.<br>Toate drepturile rezervate.
+  </p>
+</footer>
+
+</body>
+</html>
