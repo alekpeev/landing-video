@@ -17,9 +17,9 @@
   --blush:    #f9e8ec;
   --gold:     #c9973a;
   --gold-l:   #e8b84b;
-  --cream:    #fdf8f5;
-  --cream2:   #f7f0ea;
-  --border:   #ecddd6;
+  --cream:    #f7ece6;
+  --cream2:   #f1e2d9;
+  --border:   #e7d4ca;
   --text:     #1a0a14;
   --muted:    #7a5c65;
   --green:    #2d7a5f;
@@ -116,6 +116,14 @@ p  { font-size: 15px; line-height: 1.65; }
   border: 2px solid var(--plum);
 }
 
+/* Tap feedback (mobile) + hover (desktop) for all buttons */
+.btn-secondary, .btn-ghost { transition: transform .15s, box-shadow .15s, background .15s; }
+.btn-secondary:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(45,27,46,.4); }
+.btn-ghost:hover     { background: var(--plum); color: #fff !important; }
+.btn-primary:active   { transform: scale(.97); box-shadow: 0 3px 12px rgba(200,80,106,.4); }
+.btn-secondary:active { transform: scale(.97); box-shadow: 0 3px 10px rgba(45,27,46,.3); }
+.btn-ghost:active     { transform: scale(.97); }
+
 /* ── ANNOUNCEMENT BAR ── */
 .announce {
   background: var(--plum);
@@ -156,7 +164,8 @@ p  { font-size: 15px; line-height: 1.65; }
   box-shadow: var(--shadow-s); margin-bottom: 10px;
   cursor: pointer; transition: box-shadow .2s, border-color .2s;
 }
-.audio-card:hover { box-shadow: var(--shadow-m); border-color: var(--rose-l); }
+.audio-card:hover  { box-shadow: var(--shadow-m); border-color: var(--rose-l); transform: translateY(-1px); }
+.audio-card:active { transform: scale(.99); }
 .play-btn {
   width: 46px; height: 46px; flex-shrink: 0;
   background: linear-gradient(135deg, var(--rose) 0%, #a63050 100%);
@@ -183,9 +192,9 @@ p  { font-size: 15px; line-height: 1.65; }
   border-radius: var(--radius); padding: 20px 18px;
   margin-bottom: 14px; position: relative;
   box-shadow: var(--shadow-s);
-  transition: box-shadow .2s;
+  transition: box-shadow .2s, transform .2s;
 }
-.price-card:hover { box-shadow: var(--shadow-m); }
+.price-card:hover { box-shadow: var(--shadow-m); transform: translateY(-2px); }
 .price-card.popular {
   border-color: var(--rose);
   box-shadow: 0 6px 28px rgba(200,80,106,.2);
@@ -397,7 +406,7 @@ footer a:hover { color: rgba(255,255,255,.7); }
     style="width:100%; display:block; object-fit:cover;" />
 </section>
 
-<section style="padding:22px 18px 28px; background:#fdf8f5;">
+<section style="padding:24px 18px 30px; background:linear-gradient(180deg, #f6dde2 0%, #f4e3da 55%, #f7ece6 100%);">
   <div class="section-eyebrow">✅ FORMULA EXCLUSIVĂ HYDRO-NAIL SYSTEM™</div>
   <h1>Unghii Sănătoase<br><span class="accent">Chiar din Prima Noapte</span></h1>
   <p style="margin-top:12px; font-size:16px; color:#7a5c65;">
@@ -531,7 +540,7 @@ footer a:hover { color: rgba(255,255,255,.7); }
      6. PRODUCT DESCRIPTION
      ============================================ -->
 <div class="divider"></div>
-<section style="background:#fdf8f5;">
+<section style="background:#f7ece6;">
   <img src="https://res.cloudinary.com/ddzdykggq/image/upload/v1781015740/VS_44_yuhuhw.png"
     alt="Aplicare plasture SOS Nail Patch"
     style="width:100%; display:block; border-radius:12px; margin-bottom:20px;" />
@@ -593,7 +602,7 @@ footer a:hover { color: rgba(255,255,255,.7); }
 <!-- ============================================
      8. BEFORE / AFTER
      ============================================ -->
-<section style="background:#fdf8f5;">
+<section style="background:#f7ece6;">
   <div class="section-eyebrow">TRANSFORMARE REALĂ</div>
   <h2 style="margin-bottom:18px;">Înainte &amp; După — <span class="accent">Rezultate Dovedite</span></h2>
 
@@ -788,7 +797,7 @@ footer a:hover { color: rgba(255,255,255,.7); }
 <!-- ============================================
      12. PROBLEM → SOLUTION
      ============================================ -->
-<section style="background:#fdf8f5;">
+<section style="background:#f7ece6;">
   <div class="section-eyebrow">CUM AJUTĂ SOS NAIL PATCH™</div>
   <h2 style="margin-bottom:18px;">Soluție pentru <span class="accent">Fiecare Problemă</span></h2>
 
