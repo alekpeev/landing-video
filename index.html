@@ -286,27 +286,6 @@ p  { font-size: 15px; line-height: 1.65; }
 }
 .ba-label.ba-after { background: var(--green); }
 
-/* Clean before/after comparison cards */
-.ba-pair {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
-  background: #fff; padding: 10px; border-radius: var(--radius);
-  box-shadow: var(--shadow-s); margin-bottom: 14px;
-}
-.ba-cell { display: flex; flex-direction: column; }
-.ba-cell .ba-label { border-radius: 8px 8px 0 0; }
-.ba-cell img {
-  width: 100%; aspect-ratio: 1/1; object-fit: cover;
-  display: block; border-radius: 0 0 8px 8px;
-}
-.ba-caption {
-  text-align: center; font-size: 12px; color: var(--muted);
-  margin: -4px 0 14px; font-style: italic;
-}
-.ba-feature {
-  width: 100%; display: block; border-radius: var(--radius);
-  box-shadow: var(--shadow-s); margin-top: 4px;
-}
-
 /* ── STEP ── */
 .step-item {
   display: flex; align-items: flex-start; gap: 16px; margin-bottom: 28px;
@@ -636,43 +615,37 @@ footer a:hover { color: rgba(255,255,255,.7); }
   <div class="section-eyebrow">TRANSFORMARE REALĂ</div>
   <h2 style="margin-bottom:18px;">Înainte &amp; După — <span class="accent">Rezultate Dovedite</span></h2>
 
-  <!-- Comparație 1 -->
-  <div class="ba-pair">
-    <div class="ba-cell">
-      <div class="ba-label">ÎNAINTE</div>
-      <img src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/VS_20-7307330_mgr3hy-1792865.webp"
-        alt="Unghie bolnavă — înainte" />
-    </div>
-    <div class="ba-cell">
-      <div class="ba-label ba-after">DUPĂ</div>
-      <img src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/ChatGPT_Image_Jun_9_2026_05_46_37_PM_kdmij7-1792870.png"
-        alt="Unghie sănătoasă — după" />
-    </div>
+  <!-- Comparație 1 — Înainte/După stivuite într-un card -->
+  <div style="background:#ffffff; border-radius:14px; overflow:hidden; box-shadow:0 2px 6px rgba(45,27,46,.06), 0 6px 16px rgba(45,27,46,.08); margin-bottom:16px;">
+    <div style="background:#c0394f; color:#ffffff; font-size:12px; font-weight:800; text-align:center; padding:7px; letter-spacing:1px; text-transform:uppercase;">ÎNAINTE</div>
+    <img src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/VS_20-7307330_mgr3hy-1792865.webp"
+      alt="Unghie bolnavă — înainte" style="width:100%; display:block;" />
+    <div style="background:#2d7a5f; color:#ffffff; font-size:12px; font-weight:800; text-align:center; padding:7px; letter-spacing:1px; text-transform:uppercase;">DUPĂ</div>
+    <img src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/ChatGPT_Image_Jun_9_2026_05_46_37_PM_kdmij7-1792870.png"
+      alt="Unghie sănătoasă — după" style="width:100%; display:block;" />
   </div>
 
   <!-- Comparație 2 -->
-  <div class="ba-pair">
-    <div class="ba-cell">
-      <div class="ba-label">ÎNAINTE</div>
-      <img src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/Screenshot_2026-06-09_175634_cyqoma-1792886.png"
-        alt="Înainte" />
-    </div>
-    <div class="ba-cell">
-      <div class="ba-label ba-after">DUPĂ</div>
-      <img src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/Screenshot_2026-06-09_175838_aq3p3l-1792892.png"
-        alt="După" />
-    </div>
+  <div style="background:#ffffff; border-radius:14px; overflow:hidden; box-shadow:0 2px 6px rgba(45,27,46,.06), 0 6px 16px rgba(45,27,46,.08); margin-bottom:14px;">
+    <div style="background:#c0394f; color:#ffffff; font-size:12px; font-weight:800; text-align:center; padding:7px; letter-spacing:1px; text-transform:uppercase;">ÎNAINTE</div>
+    <img src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/Screenshot_2026-06-09_175634_cyqoma-1792886.png"
+      alt="Înainte" style="width:100%; display:block;" />
+    <div style="background:#2d7a5f; color:#ffffff; font-size:12px; font-weight:800; text-align:center; padding:7px; letter-spacing:1px; text-transform:uppercase;">DUPĂ</div>
+    <img src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/Screenshot_2026-06-09_175838_aq3p3l-1792892.png"
+      alt="După" style="width:100%; display:block;" />
   </div>
-  <p class="ba-caption">Rezultate reale după utilizarea regulată SOS Nail Patch™</p>
+
+  <p style="text-align:center; font-size:12px; color:#7a5c65; font-style:italic; margin:0 0 16px;">Rezultate reale după utilizarea regulată SOS Nail Patch™</p>
 
   <!-- Produs close-up -->
   <img src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/Screenshot_2026-06-09_175420_jfeqbx-1792878.png"
     alt="Produs close-up"
-    style="width:60%; display:block; margin:0 auto 16px; border-radius:var(--radius); box-shadow:var(--shadow-s);" />
+    style="width:70%; display:block; margin:0 auto 16px; border-radius:14px; box-shadow:0 2px 6px rgba(45,27,46,.06), 0 6px 16px rgba(45,27,46,.08);" />
 
   <!-- Infografic beneficii + transformare -->
-  <img class="ba-feature" src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/VS_24_nctokc-1792895.png"
-    alt="Beneficii + Înainte/După" />
+  <img src="https://content.app-sources.com/s/463518041210353061/uploads/RO_SoS_Nail_Pach/VS_24_nctokc-1792895.png"
+    alt="Beneficii + Înainte/După"
+    style="width:100%; display:block; border-radius:14px; box-shadow:0 2px 6px rgba(45,27,46,.06), 0 6px 16px rgba(45,27,46,.08);" />
 </section>
 
 <!-- ============================================
